@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
-import logo from './assets/learnformance Logo.png'; 
+import logo from './assets/learnformance-logo.png'; 
 
 const OnePager = () => {
   const data = {
@@ -83,7 +83,7 @@ const OnePager = () => {
           <div className="flex-shrink-0 mr-8">
             <img
                 src={logo}
-                alt="Learnformance Logo"
+                alt="Learnformance-logo"
                 className="w-20 h-20 object-contain"
             />
           </div>
@@ -222,7 +222,7 @@ const OnePager = () => {
         <div className="mt-12 pt-6 border-t flex items-center" style={{ borderColor: '#E0E0E0' }}>
           <img
             src={logo}
-            alt="Learnformance Logo"
+            alt="Learnformance-logo"
             className="w-12 h-12 mr-3 object-contain"
         />
           <p className="text-sm" style={{ color: '#1F3A93', fontFamily: 'Inter' }}>
