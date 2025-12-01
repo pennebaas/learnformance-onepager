@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
-import logo from './assets/learnformance-logo.png'; 
+import logo from './assets/Learnformance-logo.png'; 
 
 const OnePager = () => {
   const data = {
