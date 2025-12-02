@@ -123,7 +123,7 @@ const OnePager = () => {
       <div
         className="flex flex-col a4-page"
         style={{
-        padding: '10mm 6mm 18mm',
+        padding: '10mm 6mm 10mm',
         boxSizing: 'border-box'
   }}
 >
