@@ -100,19 +100,23 @@ const OnePager = () => {
       }}
     >
       <style>{`
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
-  @media print {
-    body { margin: 0; }
-    @page { size: A4 portrait; margin: 0; }
+        @media print {
+        body { margin: 0; }
+        @page { size: A4 portrait; margin: 0; }
 
-    /* FIX: ensure one single A4 page in PDF */
-    .a4-page {
-      height: 297mm;     /* exactly one page */
-      overflow: hidden;  /* prevents footer from jumping to page 2 */
+        /* Force everything into a single fixed A4 page */
+        .a4-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
     }
-  }
-`}</style>
+  `}</style>
 
 
       {/* FLEX COLUMN A4 PAGE */}
@@ -378,7 +382,7 @@ const OnePager = () => {
             style={{ color: '#1F3A93', fontFamily: 'Inter' }}
           >
             <span className="font-semibold">Learnformance</span> - Turning your
-            learning data into measurable impact 1143
+            learning data into measurable impact 1147
           </p>
         </div>
       </div>
