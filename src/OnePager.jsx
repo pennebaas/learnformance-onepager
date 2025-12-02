@@ -100,22 +100,30 @@ const OnePager = () => {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap');
-        @media print {
-          body { margin: 0; }
-          @page { size: A4 portrait; margin: 0; }
-        }
-      `}</style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+  @media print {
+    body { margin: 0; }
+    @page { size: A4 portrait; margin: 0; }
+
+    /* FIX: ensure one single A4 page in PDF */
+    .a4-page {
+      height: 297mm;     /* exactly one page */
+      overflow: hidden;  /* prevents footer from jumping to page 2 */
+    }
+  }
+`}</style>
+
 
       {/* FLEX COLUMN A4 PAGE */}
       <div
-        className="flex flex-col"
+        className="flex flex-col a4-page"
         style={{
-          minHeight: '297mm',          // A4 height
-          padding: '10mm 6mm 18mm',    // top / sides / bottom
-          boxSizing: 'border-box'
-        }}
-      >
+        padding: '10mm 6mm 18mm',
+        boxSizing: 'border-box'
+  }}
+>
+
         {/* MAIN CONTENT */}
         <div className="max-w-full mx-auto flex-1">
           {/* Header */}
